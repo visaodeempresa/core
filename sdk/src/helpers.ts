@@ -50,6 +50,10 @@ export function buildProjectQuery(options?: EmbedOptions){
     queryParams += `${queryParams.length ? '&' : ''}hidedevtools=1`;
   }
 
+  if(options.initialPath){
+    queryParams += `${queryParams.length ? '&' : ''}initialpath=${encodeURIComponent(options.initialPath)}`;
+  }
+
   if(typeof options.devToolsHeight === 'number' && options.devToolsHeight > 0 && options.devToolsHeight < 100){
     queryParams += `${queryParams.length ? '&' : ''}devtoolsheight=${options.devToolsHeight}`;
   }

@@ -28,6 +28,7 @@ export interface ProjectOptions {
   openFile?: string;
   hideDevTools?: boolean;
   devToolsHeight?: number;
+  initialPath?: string;
   origin?: string;
 }
 
